@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Generator</title>
+    <link rel="stylesheet" href="general.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="flexContainer">
+        <div class="game-top fcDisplay">
+            <div>
+                <label for="delay">Animation Delay:</label>
+                <input type="range" min="0" max="100" value="10" class="slider" id="delay">
+            </div>
+            <div>
+                <label for="solutionToggle">Show Solution:</label>
+                <input type="checkbox" id="solutionToggle" class="toggle" checked>
+            </div>
+        </div>
+        <canvas id="mazeCanvas" width="1000" height="600"></canvas>
+        <form action="" id="mazeInfo">
+            <label for="rowN">Enter row number:</label>
+            <input type="text" id="rowN" class="form-control" placeholder="10">
+            <label for="colN">Enter column number:</label>
+            <input type="text" id="colN" class="form-control" placeholder="10">
+            <button type="submit" class="btn-primary pinkBg space-grotesk">Generate</button>
+        </form>
+    </div>
+    <script src="hex.js"></script>
+    <script src="maze.js"></script>
+</body>
+
+</html>

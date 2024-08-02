@@ -1,0 +1,236 @@
+/* Animations */
+
+@keyframes fadeOut {
+    0% {
+        background-size: cover;
+        border-color: transparent;
+        filter: opacity(100);
+    }
+
+    100% {
+        background-size: cover;
+        border-color: transparent;
+        filter: opacity(0);
+    }
+
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(-50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropUp {
+    0% {
+        transform: translateY(50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeOut 1.5s backwards;
+}
+
+.dropIn {
+    animation: dropUp 1s backwards;
+}
+
+.dropDown {
+    animation: dropDown 1s backwards;
+}
+
+.delay {
+    animation-delay: 1.5s;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "Lemon";
+    src: url('fonts/Lemon-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MooLahLah";
+    src: url('fonts/MooLahLah-Regular.ttf');
+}
+
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url('fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+    font-family: "Rubik";
+    src: url('fonts/RubikBrokenFax-Regular.ttf');
+}
+
+.space-grotesk {
+    font-family: 'SpaceGrotesk';
+}
+
+.lemon {
+    font-family: 'Lemon';
+}
+
+.rubik {
+    font-family: 'Rubik';
+}
+
+.moo {
+    font-family: 'MooLahLah';
+}
+
+.keyRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 1px;
+}
+
+.key:hover,
+.key:focus {
+    transform: translateY(2px);
+}
+
+/* General Effects */
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    transition: transform 0.1s linear;
+}
+
+button:hover,
+button:focus {
+    transform: translateY(0.5rem);
+}
+
+html,
+body,
+.flexContainer {
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+.large {
+    text-align: center;
+    flex: 0 0 100%;
+    font-size: 500%;
+    letter-spacing: 2rem;
+    line-height: 1.5em;
+}
+
+.reflect {
+    -webkit-box-reflect: below 0 linear-gradient(transparent, #0004)
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center space-around;
+    flex-wrap: wrap;
+}
+
+.round {
+    border-radius: 2.5rem;
+}
+
+.btn-medium {
+    padding: 0.5rem 1.2rem;
+    font-size: xx-large;
+}
+
+.blackBg {
+    background: #000;
+}
+
+
+.noBg {
+    background: none;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+.shadow {
+    box-shadow: 6px 6px 40px rgba(33, 33, 33, 0.6), 6px 6px 20px rgba(33, 33, 33, 0.6) inset;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.overlay h1 {
+    color: #fff;
+    font-size: 400%;
+    font-family: "SpaceGrotesk";
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.overlay button {
+    background-color: #fff;
+    border-radius: 5rem;
+    padding: 10px 20px;
+}
+
+/* canvas */
+
+canvas {
+    border: solid 1px #000;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.fcDisplay {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.btn-primary {
+    font-size: large;
+    border-radius: 10px;
+    margin: 5px 3px;
+    padding: 5px 7px;
+}
+
+.pinkBg {
+    background-color: pink;
+    border: solid 1px pink;
+    color: #fff;
+}
